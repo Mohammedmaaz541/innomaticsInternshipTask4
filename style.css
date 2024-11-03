@@ -1,0 +1,359 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: hsl(210, 30%, 15%);
+    color: hsl(0, 0%, 95%);
+}
+
+/* Header Styles */
+header {
+    background-color: hsl(205, 30%, 25%);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    width: 140px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: hsl(50, 100%, 50%);
+    text-shadow: 0 0 10px hsl(50, 100%, 70%);
+}
+
+.nav-drop {
+    width: 30px;
+    display: none;
+}
+
+/* Hero Section */
+/* Hero Section */
+
+.hero {
+    background-image: url('image.png'); /* Update with the path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    position: relative; /* Positioning context for overlay */
+}
+
+.hero:before {
+    content: ''; /* Pseudo-element for overlay */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1; /* Make sure overlay is on top of the background image */
+}
+
+.hero h1, .hero p, .explore-btn {
+    position: relative; /* Positioning context for child elements */
+    z-index: 2; /* Make sure text is above the overlay */
+    
+}
+
+
+.explore-btn {
+    background: linear-gradient(to right, hsl(190, 80%, 50%), hsl(210, 80%, 40%));
+    padding: 20px 30px;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    margin-top: 50px; /* Space above the button */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.explore-btn:hover {
+    background: hsl(190, 80%, 60%); /* Darken on hover for effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+
+
+.trialbar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: rotate(-90deg);
+    z-index: 5;
+    margin: 0 -100px; /* Adjust as necessary */
+    display: flex; /* Center the button inside the div */
+    align-items: center; /* Vertically center the button */
+}
+
+.trial-btn {
+    background: linear-gradient(to right, hsl(198, 60%, 50%), hsl(218, 28%, 13%));
+    padding: 15px 30px; /* Adjust padding to your preference */
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-bottom: 30px; /* Add margin below the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.trial-btn:hover {
+    background: hsl(198, 60%, 50%);
+    transform: translateY(-2px);
+}
+
+
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(210, 30%, 20%);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.about-image img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: hsl(210, 30%, 15%);
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 10px;
+    color: hsl(50, 100%, 50%);
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: hsl(205, 30%, 25%);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: hsl(210, 30%, 20%);
+}
+
+.gallery-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery-img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: hsl(205, 30%, 25%);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    line-height: 1.6rem;
+    font-size: 15px;
+}
+
+.mail a {
+    text-decoration: none;
+    font-weight: 600;
+    color: hsl(50, 100%, 50%);
+}
+
+/* Social Icons */
+.social-icon {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .explore-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .nav-link-a {
+        display: none;
+    }
+
+    .nav-drop {
+        display: flex;
+    }
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 20px;
+    background-color: hsl(210, 30%, 15%);
+    color: hsl(0, 0%, 95%);
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: hsl(50, 100%, 50%);
+}
+
+.testimonial-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: hsl(205, 30%, 25%);
+    color: hsl(0, 0%, 95%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    transition: transform 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+.customer-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.rating {
+    color: hsl(50, 100%, 50%);
+    font-size: 18px;
+}
+
+.customer-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
